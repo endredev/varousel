@@ -1,17 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <carousel>
+      <slide v-for="fruit in slotsMock" :key="fruit">
+        <h1>{{ fruit }}</h1>
+      </slide>
+    </carousel>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import HelloWorld from "./components/HelloWorld.vue";
+import Carousel from "./components/Carousel.vue";
+import Slide from "./components/Slide.vue";
 
 @Component({
+  data() {
+    return {
+      slotsMock: ["Apple", "Orange", "Banana"]
+    };
+  },
   components: {
-    HelloWorld
+    Carousel,
+    Slide
   }
 })
 export default class App extends Vue {}
