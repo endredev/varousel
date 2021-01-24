@@ -38,6 +38,11 @@ import { Component, Vue } from "vue-property-decorator";
       type: String,
       default: "ul"
     }
+  },
+  methods: {
+    changeSlide(direction) {
+      console.log("SCROLL TO" + direction);
+    }
   }
 })
 export default class Carousel extends Vue {}
