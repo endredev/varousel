@@ -23,6 +23,7 @@ export default class Slide extends Vue {}
 .slide {
   flex: 0 0 100%;
   height: 100%;
+  min-height: 200px;
   scroll-snap-align: start;
   border: 1px solid #cecece;
   display: flex;

@@ -3,8 +3,12 @@
     <carousel
       class="story-carousel story-carousel--colors story-carousel--multiple"
     >
-      <slide class="story-carousel__slide">
-        <h1>content here</h1>
+      <slide
+        class="story-carousel__slide"
+        v-for="{ id, content } in mocks"
+        :key="id"
+      >
+        {{ content }}
       </slide>
     </carousel>
   </div>
