@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="carousel-holder">
     <!-- Slot for content slides -->
     <component :is="tag" class="carousel">
       <slot />
@@ -49,33 +49,55 @@ export default class Carousel extends Vue {}
 </script>
 
 <style lang="scss">
-.carousel {
-  display: flex;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-  -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: none;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+.carousel-holder {
+  position: relative;
 
-.carousel::-webkit-scrollbar {
-  display: none;
-}
+  .carousel {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 
-.carousel__arrows:disabled {
-  cursor: not-allowed;
-}
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
 
-.carousel__arrows--left {
-  left: 0;
-}
+  .carousel__arrows:disabled {
+    cursor: not-allowed;
+  }
 
-.carousel__arrows--right {
-  right: 0;
+  .carousel__arrows {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+      background-color: #ffffff38;
+    }
+
+    &--left {
+      left: 0;
+    }
+    &--right {
+      right: 0;
+    }
+  }
 }
 </style>

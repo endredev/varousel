@@ -25,19 +25,13 @@ export default class Slide extends Vue {}
   height: 100%;
   min-height: 200px;
   scroll-snap-align: start;
-  border: 1px solid #cecece;
+  border: 1px solid white;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   outline: none;
-
-  &:nth-child(n + 1) {
-    background: #2e5c8a;
-  }
-
-  &:nth-child(2n + 1) {
-    background: #336699;
-  }
+  background-color: #42b983;
 
   @media (min-width: 500px) {
     flex: 0 0 50%;

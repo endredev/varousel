@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    <carousel
-      class="story-carousel story-carousel--colors story-carousel--multiple"
-    >
+    <carousel>
       <slide
         class="story-carousel__slide"
         v-for="{ id, content } in mocks"
@@ -34,3 +32,10 @@ import mocks from "./mock";
 })
 export default class App extends Vue {}
 </script>
+
+<style>
+body {
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+}
+</style>
