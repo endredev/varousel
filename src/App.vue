@@ -12,7 +12,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { Component, Vue } from "vue-property-decorator";
 import Carousel from "./components/Carousel.vue";
 import Slide from "./components/Slide.vue";

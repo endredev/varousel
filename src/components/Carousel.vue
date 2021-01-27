@@ -1,7 +1,7 @@
 <template>
   <div class="carousel-holder">
     <!-- Slot for content slides -->
-    <component :is="tag" class="carousel">
+    <component :is="tag" ref="vsWrapper" class="carousel">
       <slot />
     </component>
 
@@ -25,15 +25,9 @@
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-
-@Component({
-  name: "Carousel",
+<script>
+export default {
   props: {
-    /**
-     * Custom tag
-     */
     tag: {
       type: String,
       default: "ul"
@@ -41,11 +35,18 @@ import { Component, Vue } from "vue-property-decorator";
   },
   methods: {
     changeSlide(direction) {
-      console.log("SCROLL TO" + direction);
+      const nextSlideWidth = this.$slots.default[0].elm.clientWidth;
+      this.handleScroll(nextSlideWidth, direction);
+    },
+
+    handleScroll(x = 0, direction) {
+      this.$refs.vsWrapper.scrollBy({
+        left: x * direction,
+        behavior: "smooth"
+      });
     }
   }
-})
-export default class Carousel extends Vue {}
+};
 </script>
 
 <style lang="scss">
