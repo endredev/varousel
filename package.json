@@ -1,7 +1,10 @@
 {
   "name": "varousel",
   "version": "0.1.0",
-  "private": true,
+  "description": "Simplest vue carousel ever. Flexible, responsive, and green",
+  "author": "Endre Szabo - dev.szabo.endre@gmail.com",
+  "main": "./dist/index.js",
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -50,18 +53,7 @@
     "parserOptions": {
       "ecmaVersion": 2020
     },
-    "rules": {},
-    "overrides": [
-      {
-        "files": [
-          "**/__tests__/*.{j,t}s?(x)",
-          "**/tests/unit/**/*.spec.{j,t}s?(x)"
-        ],
-        "env": {
-          "jest": true
-        }
-      }
-    ]
+    "rules": {}
   },
   "browserslist": [
     "> 1%",

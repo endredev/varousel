@@ -1,29 +1,5 @@
-# varousel
+# Vue Carousel
 
-## Project setup
-```
-npm install
-```
+**WARNING: Varousel is at pre-alpha stage of development and may undergo significant changes.**
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+**Feel free to submit issues and feature requests [here](https://github.com/endredev/varousel/issues)**.
